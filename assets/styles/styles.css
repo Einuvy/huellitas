@@ -69,6 +69,18 @@ footer {
     height: 30vh;
 }
 
+.colorText {
+    color: #F87008;
+    font-weight: bold;
+}
+
+@media (max-width: 600px) {
+    .header-res {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
 @media (max-width: 768px) {
     .clients {
         display: flex;
