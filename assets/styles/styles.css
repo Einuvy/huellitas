@@ -1,0 +1,74 @@
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.title {
+    color: #F87008;
+}
+.colorText{
+    color: #F87008;
+}
+
+main {
+    background-color: #F8F8F8;
+}
+
+.img-logo {
+    width: 6rem;
+}
+
+::placeholder {
+    color: #F87008;
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+.cart {
+    width: 5rem;
+    height: 3rem;
+    background-color: #F8F8F8;
+    border-style: none;
+}
+
+.cart-i {
+    width: 2.4rem;
+}
+
+.line-middle {
+    font-size: 9rem;
+    color: #F87008;
+}
+
+.img-people {
+    width: 6rem;
+    height: 9.4rem;
+}
+
+.circle {
+    height: 10rem;
+    width: 10rem;
+}
+
+@media (max-width: 768px) {
+    .clients {
+        display: flex;
+        flex-direction: column;
+    }
+    .our-text {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    .width-section {
+        width: 80% !important;
+    }
+    .line-vertical {
+        display: none;
+    }
+
+}
