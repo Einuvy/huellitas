@@ -14,6 +14,12 @@ a {
     color: #F87008;
 }
 
+textarea {
+    height: 30px;
+    width: 100%;
+    resize: none;
+}
+
 main {
     background-color: #F8F8F8;
 }
