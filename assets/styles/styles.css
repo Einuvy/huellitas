@@ -84,3 +84,30 @@ article>img {
     width: 100% !important;
     height: 45rem !important;
 }
+
+#navBar{
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+
+#header-huellitas{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#input-carrito{
+    width: 20rem;
+    display: flex;
+    justify-content: space-between;
+}
+.input{
+    width: 75%;
+}
+
+#huellitas{
+    width: 25rem;
+    display: flex;
+    justify-content: space-around;
+}
