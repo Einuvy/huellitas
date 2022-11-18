@@ -74,6 +74,29 @@ footer {
     font-weight: bold;
 }
 
+.bg-buttons {
+    background-color: #F87008;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    font-weight: bold;
+}
+
+.bg-buy {
+    background-color: #fffb00;
+}
+
+.shadow {
+    border: none;
+    box-shadow: 28px 33px 20px -3px rgba(0,0,0,0.1) !important;
+}
+
+.shadow-buttons {
+    box-shadow: 1px 5px 5px 2px rgba(0,0,0,0.1) !important;
+}
+.shadow-buttons:hover {
+    color: #e0e0e0;
+}
+
 @media (max-width: 600px) {
     .header-res {
         display: flex;
