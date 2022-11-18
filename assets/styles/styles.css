@@ -15,6 +15,11 @@ main {
     background-color: #F8F8F8;
 }
 
+footer {
+    background-color: #F87008;
+    height: 14vh;
+}
+
 .img-logo {
     width: 6rem;
 }
@@ -49,6 +54,19 @@ main {
 .circle {
     height: 10rem;
     width: 10rem;
+}
+
+.link-nav:hover {
+    color: #bd5b00;
+}
+
+#active {
+    color: #F87008;
+    font-weight: bold;
+}
+
+.footer-info {
+    height: 30vh;
 }
 
 @media (max-width: 768px) {
