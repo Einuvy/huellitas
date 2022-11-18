@@ -69,3 +69,18 @@ main {
     }
 
 }
+
+#carouselExampleSlidesOnly{
+    width: 100% !important;
+}
+.carousel-inner{
+    width: 100% !important;
+    height: 45rem !important;
+    display: flex;
+    align-items: center;
+}
+
+article>img {
+    width: 100% !important;
+    height: 45rem !important;
+}
