@@ -35,3 +35,37 @@ main {
 .cart-i {
     width: 2.4rem;
 }
+
+.line-middle {
+    font-size: 9rem;
+    color: #F87008;
+}
+
+.img-people {
+    width: 6rem;
+    height: 9.4rem;
+}
+
+.circle {
+    height: 10rem;
+    width: 10rem;
+}
+
+@media (max-width: 768px) {
+    .clients {
+        display: flex;
+        flex-direction: column;
+    }
+    .our-text {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    .width-section {
+        width: 80% !important;
+    }
+    .line-vertical {
+        display: none;
+    }
+
+}
