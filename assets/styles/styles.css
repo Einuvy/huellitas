@@ -99,3 +99,19 @@ footer {
     }
 
 }
+
+@media (max-width: 1200px) {
+    .contact {
+        display: flex;
+        flex-direction: column;
+    }
+    .info-contact {
+        margin-left: 5rem;
+    }
+    .map {
+        margin: 0 auto;
+        width: 25rem;
+        height: 25rem;
+        margin-bottom: 5rem;
+    }
+}
