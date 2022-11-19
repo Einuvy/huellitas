@@ -28,17 +28,30 @@ const app = createApp( {
     methods: {
         checkbox() {
             this.categories = Array.from(new Set(this.dataMedicamento.map(property => property.stock)))
-            console.log(this.categories)
         },
         search() {
             this.copyDataInfo = this.dataMedicamento.filter(property => property.nombre.toLowerCase().includes(this.inputText.toLowerCase().trim()))
+        },
+        alerts() {
+            Toastify({
+                text: "Producto agregado al carrito",
+                duration: 3000,
+                destination: "",
+                newWindow: false,
+                close: true,
+                gravity: "top",
+                position: "right", 
+                stopOnFocus: true, 
+                style: {
+                  background: "linear-gradient(to right, #FDC830, #F37335)"
+                },
+              }).showToast()        
         }
     },
     computed: {
         filterAll() {
             const filterChecked = this.dataMedicamento.filter(event => this.checked.includes( event.stock ) || this.checked.length === 0)
             this.copyDataInfo = filterChecked.filter( event => event.nombre.toLowerCase().trim().includes( this.inputText.toLowerCase().trim()))
-            console.log(this.copyDataInfo)
         }
     }
 } )

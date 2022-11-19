@@ -31,6 +31,21 @@ const app = createApp( {
         },
         search() {
             this.copyDataInfo = this.dataMedicamento.filter(property => property.nombre.toLowerCase().includes(this.inputText.toLowerCase().trim()))
+        },
+        alerts() {
+            Toastify({
+                text: "Producto agregado al carrito",
+                duration: 3000,
+                destination: "",
+                newWindow: false,
+                close: true,
+                gravity: "top",
+                position: "right", 
+                stopOnFocus: true, 
+                style: {
+                    background: "linear-gradient(to right, #FDC830, #F37335)"
+                },
+              }).showToast()
         }
     },
     computed: {
