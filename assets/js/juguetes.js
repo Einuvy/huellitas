@@ -21,13 +21,14 @@ const app = createApp( {
                 this.dataPet = data
                 this.dataInfo = this.dataPet.response
                 this.copyDataInfo = this.dataInfo
-                this.dataMedicamento = this.dataInfo.filter(property => property.tipo === "Medicamento")
+                this.dataMedicamento = this.dataInfo.filter(property => property.tipo === "Juguete")
                 this.checkbox()
             })
     },
     methods: {
         checkbox() {
             this.categories = Array.from(new Set(this.dataMedicamento.map(property => property.stock)))
+            console.log(this.categories)
         },
         search() {
             this.copyDataInfo = this.dataMedicamento.filter(property => property.nombre.toLowerCase().includes(this.inputText.toLowerCase().trim()))

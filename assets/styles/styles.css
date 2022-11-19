@@ -57,7 +57,8 @@ footer {
 }
 
 .link-nav:hover {
-    color: #bd5b00;
+    font-weight: bold;
+    color: rgba(56, 56, 56, 0.89);
 }
 
 #active {
