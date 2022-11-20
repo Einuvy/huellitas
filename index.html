@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,76 +8,104 @@
     <title>Pet Shop Huellitas</title>
     <link rel="shortcut icon" href="./assets/img/logo_pet_shop.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/3edbd18505.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/styles/styles.css">
 </head>
-<body>
-    <header>
-        <div class="d-flex justify-content-around align-items-center" style="background-color: #F8F8F8;">
-            <div class="d-flex align-items-center">
-                <img class="img-logo py-3 me-4" src="./assets/img/logo_pet_shop.png" alt="Logo de un perro">
-                <h2 class="display-3 fw-bold">Huellitas</h2>
-            </div>
-        </div>
+<div id="app">
 
-        <div class="py-4">
-            <nav>
-                <ul class="d-flex justify-content-center fs-4">
-                    <li> <a id="active" href="#" class="me-4 link-nav">Home</a> </li>
-                    <li> <a href="./farmacia.html" class="me-4 link-nav">Farmacia</a> </li>
-                    <li> <a href="./juguetes.html" class="me-4 link-nav">Juguetes</a> </li>
-                    <li> <a href="./contact.html" class="me-4 link-nav">Contacto</a> </li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <main class="container-fluid">
-        <h1 class="py-3 fw-bold text-center title">Bienvenido al lugar feliz para tus mascotas</h1> 
-
-        <div>
-            <h2 class="title fw-bold ps-5">Destacados</h2>
-            <!-- Div para insertar las cards de manera dinamica -->
-            <div class="container py-4">
-                <div class="card" style="width: 18rem;">
-                    <img src="" class="card-img-top" alt="">
-                    <div class="card-body">
-                      <h5 class="card-title"></h5>
-                      <p class="card-text"></p>
-                      <a href="#" class="btn btn-warning fw-bold">Comprar</a>
-                    </div>
-                  </div>
-            </div>
-        </div>
-
-        <article>
-            <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="./assets/img/pet_carrousel.jpg" class="d-block w-100" alt="Imagen 1">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="./assets/img/perrito.jpg" class="d-block w-100" alt="Imagen 2">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="./assets/img/pet_carrousel3.jpg" class="d-block w-100" alt="Imagen 3">
-                    </div>
+    <body>
+        <header>
+            <div class="d-flex justify-content-around align-items-center" style="background-color: #F8F8F8;">
+                <div class="d-flex align-items-center">
+                    <img class="img-logo py-3 me-4" src="./assets/img/logo_pet_shop.png" alt="Logo de un perro">
+                    <h2 class="display-3 fw-bold">Huellitas</h2>
                 </div>
             </div>
-            
 
+            <div class="py-4">
+                <nav>
+                    <ul class="d-flex justify-content-center fs-4">
+                        <li> <a id="active" href="#" class="me-4 link-nav">Home</a> </li>
+                        <li> <a href="./farmacia.html" class="me-4 link-nav">Farmacia</a> </li>
+                        <li> <a href="./juguetes.html" class="me-4 link-nav">Juguetes</a> </li>
+                        <li> <a href="./contact.html" class="me-4 link-nav">Contacto</a> </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main class="container-fluid">
+            <h1 class="py-3 fw-bold text-center title">¡Bienvenido al lugar feliz para tus mascotas!</h1>
+
+            <article class="article-carrousel d-sm-flex align-items-sm-center justify-content-sm-center">
+                <div id="carouselExampleSlidesOnly " class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner carrousel-container">
+                        <div class="carousel-item active">
+                            <img src="./assets/img/pet_carrousel.jpg" class="d-block w-100 img-carrousel"
+                                alt="Imagen 1">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./assets/img/pet_carrousel2.jpg" class="d-block w-100 img-carrousel"
+                                alt="Imagen 2">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./assets/img/pet_carrousel3.jpg" class="d-block w-100 img-carrousel"
+                                alt="Imagen 3">
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <div class="container py-4 d-flex flex-wrap flex-column justify-content-between">
+                <div class="ul-container">
+                    <div class="d-flex ">
+                        <input class="form-control me-2" type="search"
+                            placeholder="Busca los productos que desees aqui..." v-model="inputSearch">
+                        <a :href="'./productos.html?search='+inputSearch"
+                            class="btn-rose btn btn-primary align-self-end"><i
+                                class="fa-solid fa-magnifying-glass"></i></a>
+                    </div>
+                    {{busqueda}}
+                    <ul v-if="inputSearch" v-for="producto in productoSearch" class="ul-search">
+                        <li class="li-search"><img style="width: 20px;" :src="producto.imagen"> {{producto.nombre}}
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="">
+                <h2 class="title fw-bold ps-5">Ultimos stocks</h2>
+                <!-- Div para insertar las cards de manera dinamica -->
+                <div class="container py-4 d-flex flex-wrap flex-column justify-content-between flex-sm-row">
+                    <a class="card col-3" v-for="producto in ultimosStocks" href="'./detalles.html?id='+producto._id">
+                        <div>
+                            <img :src="producto.imagen" class="card-img-top" alt="'imagen' + producto.nombre">
+                            <div class="card-body">
+                                <h5 class="card-title">{{producto.nombre}}</h5>
+                                <p class="card-text">Seccion: {{producto.tipo}}</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
 
             <div class="d-flex justify-content-around bg-white our-text">
                 <div class="w-25 pt-4 width-section">
                     <h3 class="fw-bold">Nuestra Visión</h3>
-                    <p>Ser una empresa moderna y sólida, líder en el país y con proyección internacional. Liderada por un equipo con acceso a la más alta calidad de capacitación y con una mirada colaborativa e inclusiva.</p>
+                    <p>Ser una empresa moderna y sólida, líder en el país y con proyección internacional. Liderada
+                        por un equipo con acceso a la más alta calidad de capacitación y con una mirada colaborativa
+                        e inclusiva.</p>
                 </div>
                 <div class="line-middle">
                     <p class="line-vertical">|</p>
                 </div>
                 <div class="w-25 pt-4 width-section">
                     <h3 class="fw-bold">Nuestra Historia</h3>
-                    <p>En el año 2010 en medio de un año de crisis económica y recesión, nos arriesgamos e impulsamos el negocio con una inyección de capital y en noviembre inauguramos nuestro primer local en el barrio de Melipal. La crisis politico-económica y la devaluación de la moneda impulsó el turismo, principal factor en el crecimiento de Bariloche.</p>
+                    <p>En el año 2010 en medio de un año de crisis económica y recesión, nos arriesgamos e
+                        impulsamos el negocio con una inyección de capital y en noviembre inauguramos nuestro primer
+                        local en el barrio de Melipal. La crisis politico-económica y la devaluación de la moneda
+                        impulsó el turismo, principal factor en el crecimiento de Bariloche.</p>
                 </div>
             </div>
 
@@ -88,47 +117,55 @@
                         <div class="rounded-circle circle bg-dark d-flex justify-content-center">
                             <img class="img-people" src="./assets/img/people/person1.png" alt="">
                         </div>
-                        <p class="w-50">Los productos de esta increíble compañía son maravillosos, mi mascota ahora es más feliz.</p>
+                        <p class="w-50">Los productos de esta increíble compañía son maravillosos, mi mascota ahora
+                            es más feliz.</p>
                     </div>
                     <div class="d-flex flex-column align-items-center">
                         <h5 class="fw-bold">Gabriel Fariña</h5>
                         <div class="rounded-circle circle bg-dark d-flex justify-content-center">
                             <img class="img-people" src="./assets/img/people/person2.png" alt="">
                         </div>
-                        <p class="w-50">Ahora con los productos que hay en la sección de farmacia mi perro está con una excelente salud.</p>
+                        <p class="w-50">Ahora con los productos que hay en la sección de farmacia mi perro está con
+                            una excelente salud.</p>
                     </div>
                     <div class="d-flex flex-column align-items-center">
                         <h5 class="fw-bold">Hector Jordan</h5>
                         <div class="rounded-circle circle bg-dark d-flex justify-content-center">
                             <img class="img-people" src="./assets/img/people/person3.png" alt="">
                         </div>
-                        <p class="w-50">La atención y calidad de los productos es simplemente espectacular y el envío fue muy rápido. Los recomiendo!</p>
+                        <p class="w-50">La atención y calidad de los productos es simplemente espectacular y el
+                            envío fue muy rápido. Los recomiendo!</p>
                     </div>
                     <div class="d-flex flex-column align-items-center">
                         <h5 class="fw-bold">Sarai Amores</h5>
                         <div class="rounded-circle circle bg-dark d-flex justify-content-center">
                             <img class="img-people" src="./assets/img/people/person4.png" alt="">
                         </div>
-                        <p class="w-50">Con los juguetes que ofrecen mi michi se divierte un montón, además de que la calidad de los juguetes es muy buena</p>
+                        <p class="w-50">Con los juguetes que ofrecen mi michi se divierte un montón, además de que
+                            la calidad de los juguetes es muy buena</p>
                     </div>
                 </section>
             </div>
-        </article>
-    </main>
 
-    <footer class="d-flex justify-content-around align-items-center">
+        </main>
+
+        <footer class="d-flex justify-content-around align-items-center">
             <div>
                 <h3 class="text-light fw-bold">MindHub 37/38</h3>
             </div>
             <div>
-                <a href="#" class="icons"><i class="bi bi-facebook text-light"></i></a> 
+                <a href="#" class="icons"><i class="bi bi-facebook text-light"></i></a>
                 <a href="#" class="icons"><i class="bi bi-instagram text-light"></i></a>
-                <a href="#" class="icons"><i class="bi bi-whatsapp text-light"></i></a>  
+                <a href="#" class="icons"><i class="bi bi-whatsapp text-light"></i></a>
             </div>
-    </footer>
+        </footer>
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+        <script src="./assets/js/index.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+            crossorigin="anonymous"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-    <script src="./assets/js/main.js"></script>
-</body>
-</html> 
+    </body>
+</div>
+
+</html>
