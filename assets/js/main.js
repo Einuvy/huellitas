@@ -7,7 +7,8 @@ const destacados = createApp({
             productos: [],
             productosDestacados: [],
             productoRandom: [],
-            numero: 3
+            numeroRandom: []
+            
         }
     },
     created(){
@@ -20,6 +21,11 @@ const destacados = createApp({
             .then(data => {
                 this.productos = data.response
                 this.productosDestacados = this.productos.filter(producto => producto.stock <= 5)
+
+                this.numeroRandom = Math.floor(Math.random()* this.productosDestacados.length)
+
+                this.productoRandom = this.productosDestacados[this.numeroRandom]
+                
             })
             .catch(err => console.log(err))
         }
