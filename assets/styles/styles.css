@@ -10,6 +10,11 @@ a {
 .title {
     color: #F87008;
 }
+header {
+    position: sticky;
+    top: 0px;
+    z-index: 3;
+}
 
 main {
     background-color: #F8F8F8;
