@@ -1,4 +1,4 @@
-const {createApp} = Vue;
+/* const {createApp} = Vue;
 
 const app = createApp({
     data(){
@@ -16,8 +16,6 @@ const app = createApp({
                 this.datos= datos.response;
 
                 this.ultimosStocks = this.datos.filter( producto => producto.stock <= 2)
-                console.log(this.ultimosStocks);
-
                 this.productoSearch = this.datos;
 
             }) 
@@ -37,4 +35,4 @@ const app = createApp({
     }
 })
 
-app.mount('#app')
+app.mount('#app') */
