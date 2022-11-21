@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Juguetes</title>
+    <title>Carrito</title>
+    <link rel="shortcut icon" href="./assets/img/logo_pet_shop.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/styles/styles.css">
@@ -16,10 +17,6 @@
                 <div class="d-flex align-items-center">
                     <img class="img-logo py-3 me-4" src="./assets/img/logo_pet_shop.png" alt="Logo de un perro">
                     <h2 class="display-3 fw-bold">Huellitas</h2>
-                </div>
-                <div>
-                    <input class="rounded border border-0" type="text" placeholder="Buscar..">
-                    <button class="cart"><img class="cart-i" src="./assets/img/cart.png" alt="Logo Carrito"></button>
                 </div>
             </div>
     
@@ -38,7 +35,6 @@
         <main class="main.container">
             <div>
                 <h2 class="title fw-bold ps-5">Finaliza tu compra</h2>
-                <!-- Div para insertar las cards de manera dinamica -->
                 <template v-for="buy in carrito">
                     <div class="card d-flex flex-row justify-content-between gap-5 w-100" style="width: 3rem;">
                         <img :src="buy.imagen"  style="width: 3rem;" class="card-img-top" alt="...">
@@ -58,19 +54,7 @@
                       {{sumCart}}
                   </template>
                   <div class="d-flex justify-content-center flex-column align-items-center">
-                    <div>
-                        <!-- <template v-for="producto in productoRandom">
-
-                            <div class="card" style="width: 18rem;">
-                                <img :src="producto.imagen" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                  <h5 class="card-title">{{producto.nombre}}</h5>
-                                  <p class="card-text">{{producto.descripcion}}</p>
-                                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                                </div>
-                              </div>
-                        </template> -->
-                          
+                    <div>                  
                     </div>
                     <h4 v-if="carrito.length > 0">Total: ${{totalProduct}}</h4>
                     <button v-if="carrito.length > 0" type="button" style="width: 5rem;" class="btn btn-success d-flex justify-content-center">Finalizar Compra</button>
