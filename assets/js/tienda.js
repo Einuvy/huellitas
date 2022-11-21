@@ -30,7 +30,7 @@ const app = createApp({
                 this.productoSearchMedicamentos = this.medicamentos;
                 this.productoSearchJuguetes = this.juguetes;
 
-                this.ultimosStocks = this.datos.filter( producto => producto.stock <= 2)
+                this.ultimosStocks = this.datos.filter( producto => producto.stock < 5)
                 this.productoSearch = this.datos;
 
                 if (localStorage.hasOwnProperty('cart') && localStorage.hasOwnProperty('juguetes') && localStorage.hasOwnProperty('medicamentos')) {
@@ -59,7 +59,7 @@ const app = createApp({
             this.carrito.push(element)
             element.amount = 1
             element.originalPrice = element.precio
-            if (element.tipo === 'medicamento') {
+            if (element.tipo === 'Medicamento') {
                 this.medicamentos = this.productoSearchMedicamentos.filter(product => product !== element)
             } else {
                 this.juguetes = this.productoSearchJuguetes.filter(product => product !== element)
@@ -70,7 +70,7 @@ const app = createApp({
         },
         deleteCart(element) {
             this.carrito = this.carrito.filter(product => product !== element)
-            if (element.tipo === 'medicamentos') {
+            if (element.tipo === 'Medicamento') {
                 this.medicamentos.push(element)
             } else {
                 this.juguetes.push(element)
