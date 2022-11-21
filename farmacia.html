@@ -22,11 +22,14 @@
                 </div>
                 <div>
                     <input class="rounded border border-0" type="search" placeholder="Buscar.." v-model="inputSearch">
-                    <button class="cart">
-                        <a href="./carrito.html">
-                            <img class="cart-i" src="./assets/img/cart.png" alt="Logo Carrito">
-                        </a>
-                    </button>
+                    
+                    
+                          <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                            <a>
+                                <img class="cart-i" src="./assets/img/cart.png" alt="Logo Carrito">
+                            </a>
+                        </button>
+                    
                 </div>
             </div>
             {{busquedaMedicamentos}}
@@ -40,13 +43,55 @@
                     </ul>
                 </nav>
             </div>
+            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="staticBackdropLabel">Shopping Cart</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <template v-for="buy in carrito">
+                        <div class="card d-flex flex-row justify-content-between gap-5 w-100" style="width: 3rem;">
+                            <img :src="buy.imagen"  style="width: 3rem;" class="card-img-top" alt="...">
+                            <div class="card-body d-flex flex-row gap-5">
+                                <div>
+                                    <h5 class="card-title">{{buy.nombre}}</h5>
+                                    <h5>x{{buy.amount}}</h5>
+                                </div>
+                              <div class="d-flex flex-column gap-1">
+                                  <p class="card-text">${{buy.precio}}</p>
+                                  <button @click="addAmount(buy)" type="button" style="width: 0.5rem;" class="btn btn-success d-flex justify-content-center">+</button>
+                                  <button v-if="buy.amount > 1"   @click="removeAmount(buy)"type="button" style="width: 0.5rem;" class="btn btn-danger d-flex justify-content-center">-</button>
+                              </div>
+                              <button @click="deleteCart(buy)" type="button" class="btn btn-danger">Delete Product</button>
+                            </div>
+                          </div>
+                          {{sumCart}}
+                          
+                      </template>
+                      <h3 v-if="carrito.length == 0">No items in cart</h3>
+
+                    </div>
+                    <div class="modal-footer d-flex justify-content-between">
+                        <div>
+                            <h4 v-if="carrito.length > 0">Total: ${{totalProduct}}</h4>
+                        </div>
+                        <div class="d-flex gap-2">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <a href="./carrito.html"><button type="button" class="btn btn-primary">Purchase</button></a>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
         </header>
 
         <main class="main.container">
 
             <h2 class="title fw-bold ps-5 text-center">Encuentra los mejores productos veterinarios para tu mascota</h2>
             <div class="container py-4 d-flex flex-wrap flex-row">
-                <div class="card col-3" v-for="medicamento in productoSearchMedicamentos">
+                <div class="card col-3" v-for="medicamento in productosImprimir">
                     <a :href="'./detalles.html?id='+medicamento._id">
                         <img :src="medicamento.imagen" class="card-img-top" alt="'imagen' + medicamento.nombre">
                         <div class="card-body">
@@ -55,7 +100,7 @@
                             <p class="card-text">Stock: {{medicamento.stock}}</p>
                     </a>
                     <div>
-                        <button class="btn btn-success fw-bold" v-model="">comprar</button>
+                        <button @click="addCart(medicamento)" class="btn btn-success fw-bold" >comprar</button>
                     </div>
 
 
@@ -63,7 +108,7 @@
             </div>
 
 </div>
-<p v-if="productoSearchMedicamentos.length === 0" class="display-6 fw-bolder text-center">No se econtro el producto
+<p v-if="productosImprimir.length === 0" class="display-6 fw-bolder text-center">No se econtro el producto
     solicitado...</p>
 </main>
 
@@ -71,7 +116,7 @@
     <div>
         <h3 class="text-light fw-bold">MindHub 37/38</h3>
     </div>
-    <div>
+    <div class="d-flex gap-4">
         <a href="#" class="icons"><i class="bi bi-facebook text-light"></i></a>
         <a href="#" class="icons"><i class="bi bi-instagram text-light"></i></a>
         <a href="#" class="icons"><i class="bi bi-whatsapp text-light"></i></a>

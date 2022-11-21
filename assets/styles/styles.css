@@ -10,6 +10,26 @@ a {
 .title {
     color: #F87008;
 }
+.colorText{
+    color: #F87008;
+}
+
+textarea {
+    height: 30px;
+    width: 100%;
+    resize: none;
+}
+
+
+
+.card-size {
+    width: 20rem;
+}
+.card-image-size{
+    max-height: 8rem;
+    max-width: 20rem;
+    min-width: 15rem;
+}
 
 main {
     background-color: #F8F8F8;
