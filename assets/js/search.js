@@ -17,7 +17,6 @@ const app = createApp({
             .then(datos => {
                 this.datos = datos.response;
                 this.productoURL = this.datos
-                /*  this.buscarPorURL() */
             })
             .catch(error => console.error(error))
     },

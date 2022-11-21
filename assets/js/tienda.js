@@ -30,7 +30,7 @@ const app = createApp({
                 this.productoSearchMedicamentos = this.medicamentos;
                 this.productoSearchJuguetes = this.juguetes;
 
-                this.ultimosStocks = this.datos.filter( producto => producto.stock <= 2)
+                this.ultimosStocks = this.datos.filter( producto => producto.stock < 5)
                 this.productoSearch = this.datos;
 
                 if (localStorage.hasOwnProperty('cart') && localStorage.hasOwnProperty('juguetes') && localStorage.hasOwnProperty('medicamentos')) {

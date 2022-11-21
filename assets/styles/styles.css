@@ -1,17 +1,62 @@
+#carta{
+    background-color: bisque;
+    width: fit-content;
+    display: flex;
+}
 
+#btn-agregar{
+    padding: 1px;
+    height: 4rem;
+    width: 4rem;
+    display: flex;
+    align-items: center;
+    align-self: center;
+}
+#contenedor-venta{
+    width: 100%;
+}
+#price{
+    padding-right: 1rem;
+    padding-left: .5rem;
+    display: flex;
+    align-items: center;
+}
+#imagen-carrito{
+    width: 100px !important;
+}
+main{
+    min-height: 61.5vh;
+    background-color: #F8F8F8;
+}
+.card-title{
+    cursor: pointer;
+}
+#imagenes-index:hover{
+    color: #F87008;
+}
+
+#ancord{
+    background-color: black;
+}
+
+#scroll{
+    overflow-x: auto !important;
+
+}
 
 li {
     list-style: none;
 }
-
-
 a {
     text-decoration: none;
     color: black;
 }
-main {
-    background-color: #F8F8F8;
-}
+
+
+
+
+
+
 
 .ulti-stock{
     background-color: red;
@@ -23,8 +68,8 @@ main {
 
 footer {
     background-color: #F87008;
-    height: 14vh;
-    width: 100vw;
+    height: 14vh !important;
+    margin-top: .5rem;
 }
 .title {
     color: #F87008;
