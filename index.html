@@ -88,7 +88,8 @@
                                     <h5 class="text-center py-4 fw-bold">{{producto.nombre}}</h5>
                                     <img :src="producto.imagen" :alt="producto.nombre" class="p-2 image-card"
                                         style="height: 18rem;">
-
+                                    
+                                    <p class="ulti-stock" v-if="producto.stock < 5">Ultimos en Stock</p>
                                     <p href="#" class="bg-buttons w-25">Stock: {{producto.stock}}</p>
                                     <p class="mt-3 mb-0">{{producto.descripcion}}</p>
                                     <p class="card-text"></p>
@@ -134,7 +135,7 @@
                             <div class="d-flex flex-column align-items-center">
                                 <h5 class="fw-bold">Lola</h5>
                                 <div class="rounded-circle circle bg-dark d-flex justify-content-center">
-                                    <img class="img-people" src="./assets/img/gato_client1.png" alt="">
+                                    <img class="img-people" src="./assets/img/perro_client4.png" alt="">
                                 </div>
                                 <p class="w-50">Los productos de esta increíble compañía son maravillosos, mi mascota
                                     ahora es más feliz.</p>
@@ -158,7 +159,7 @@
                             <div class="d-flex flex-column align-items-center">
                                 <h5 class="fw-bold">Pancho</h5>
                                 <div class="rounded-circle circle bg-dark d-flex justify-content-center">
-                                    <img class="img-people" src="./assets/img/perro_client4.png" alt="">
+                                    <img class="img-people" src="./assets/img/gato_client1.png" alt="">
                                 </div>
                                 <p class="w-50">Con los juguetes que ofrecen mi michi se divierte un montón, además de
                                     que la calidad de los juguetes es muy buena</p>

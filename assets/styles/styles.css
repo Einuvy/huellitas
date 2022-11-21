@@ -12,6 +12,15 @@ a {
 main {
     background-color: #F8F8F8;
 }
+
+.ulti-stock{
+    background-color: red;
+    padding: 5px;
+    border-radius: 10px;
+    font-weight: 800;
+    font-size: 20px;
+}
+
 footer {
     background-color: #F87008;
     height: 14vh;
